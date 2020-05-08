@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebCam</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="webcam.js"></script>
+</head>
+
+
+<body onload="init();">
+
+	<h1>Webcam</h1>
+	<p> Click on the "Start Webcam" button to Start Webcam. </p>
+  <p> Click on the "Stop Webcam" button to Stop Webcam. </p>
+  <p> Click on the "Take Snapshot" button to take a snapshot. </p>
+	<p>
+		<button onclick="startWebcam();">Start Webcam</button>
+		<button onclick="stopWebcam();">Stop Webcam</button>
+		<button onclick="snapshot();">Take Snapshot</button>
+	</p>
+  <div id = "vid">
+	   <video id = "webcam" onclick="snapshot(this);" id="video" controls autoplay></video>
+  </div>
+  <p>Screenshots: </p>
+	<canvas id = "myCanvas" width="400" height="350"></canvas>
+
+</body>
+</html>
